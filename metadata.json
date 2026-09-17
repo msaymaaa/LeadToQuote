@@ -1,0 +1,6 @@
+{
+  "name": "LeadToQuote",
+  "description": "Premium workflow platform for trade contractors and service businesses centralizing leads, quotations, scheduling, and invoicing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

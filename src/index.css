@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --obsidian-bg: #0b0c10;
+    --obsidian-surface: #13151b;
+    --obsidian-card: #181b22;
+    --obsidian-border: #232732;
+    --gold-accent: #d4af37;
+    --ivory-text: #f4efe6;
+    --ivory-muted: #9e988c;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--obsidian-bg);
+    color: var(--ivory-text);
+    overflow-x: hidden;
+  }
+
+  /* Accessibility: Visible focus outline for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--gold-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #f4efe6;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0c10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232732;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353b4b;
+  }
+}
+
+/* Print stylesheets for clean Quote & Invoice exports */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .printable-document {
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: #111827 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
